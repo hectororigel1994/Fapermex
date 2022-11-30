@@ -27,143 +27,140 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
       <!-- gallery products css -->
-      <link rel="stylsheet" href="css/gallery-products.css">
+   
       <!-- end gallery products css -->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
       <style>
-         @import url("https://fonts.googleapis.com/css?family=Inconsolata|Merriweather");
-body {
-  font-family: "Inconsolata", monospace;
-  margin: 0;
+       /*
+	Using Bootstrap
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,700);
+
+.page_title {
+	font-weight: 300;
+	line-height: 120%;
+	margin: 20px 0;
+	text-shadow: 0 1px 5px rgba(0,0,0,.8);
+	text-transform: uppercase;
 }
 
-button {
-  cursor: pointer;
+/* PEN STYLES ========== */
+.row {
+	margin: 0;
+}
+.container {
 }
 
-#portfolio {
-  width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(200px, 1fr));
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2px;
+.test_box {
+	padding: 0;
+}
+.test_box .inner {
+	background: #333;
+	display: block;
+	margin: 10px;
+	overflow: hidden;
+}
+.test_box .inner .test_click {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	background-color: rgba(0,0,0,.1);
+	color: #fff;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	height: 300px;
+	mix-blend-mode: normal;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.test_box .inner .test_click:hover {
+	background-color: rgba(0,100,255,.5); 
+	mix-blend-mode: hard-light;
+}
+.flex_this {
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+	display: inherit;
+	flex-wrap: inherit;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	width: 100%;
+
+}
+.test_box .inner .test_click:hover .flex_this {
+	margin-top: -5px;
 }
 
-.project {
-  position: relative;
-  background: #f2dad7;
-  overflow: hidden;
+.test_title {
+	display: block;
+	font-weight: 700;
+	margin: 0 0 20px;
+	width: 100%;
 }
-.project img {
-  position: absolute;
-  opacity: 0.9;
-}
-.project p {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  padding: 1em 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  z-index: 3;
-}
-.project .grid__title {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  white-space: nowrap;
-  bottom: 0;
-  font-weight: 100;
-  font-size: 0.8em;
-  z-index: 3;
-  text-transform: uppercase;
-  color: #474545;
-  letter-spacing: 2px;
+.test_link {
+	border: 2px solid #fff;
+	display: inline-block;
+	font-size: .8em;
+	font-weight: 700;
+	letter-spacing: .1em;
+	margin: 0 auto;
+	padding: 10px 30px;
+	text-transform: uppercase;
 }
 
-.project:hover .grid__overlay {
-  transform: translateY(0%);
+.box-01 .inner {
+	background-image: url('images/products/1.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.grid__overlay {
-  background: rgba(229, 182, 177, 0.9);
-  height: 100%;
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-  position: relative;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  transform: translateY(101%);
-  transition: all 0.3s ease-in-out;
+.box-02 .inner {
+	background-image: url('images/products/2.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.grid__overlay button {
-  background: none;
-  outline: none;
-  font-weight: 100;
-  letter-spacing: 2px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 10px;
+.box-03 .inner {
+	background-image: url('images/products/3.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.grid__overlay button:hover {
-  transition: all 0.3s ease-in-out;
-  background: #ffffff;
-  color: #d1a39e;
-  transform: scale(1.05);
+.box-04 .inner {
+	background-image: url('images/products/4.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.overlay {
-  position: fixed;
-  background: rgba(71, 69, 69, 0.7);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
-  z-index: 3;
+.box-05 .inner {
+	background-image: url('images/products/5.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-
-.overlay.open {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-}
-
-.overlay__inner {
-  background: #ffffff;
-  width: 700px;
-  padding: 20px;
-  position: relative;
-  opacity: 1;
-}
-
-.close {
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  background: none;
-  outline: 0;
-  color: #474545;
-  border: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.close:hover {
-  color: #d1a39e;
-}
-
-.project__image {
-  margin-left: -50%;
+.box-06 .inner {
+	background-image: url('images/products/6.png');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
       </style>
    </head>
@@ -209,14 +206,14 @@ button {
                                  <li class="nav-item">
                                     <a class="nav-link" href="store.html">Tienda</a>
                                  </li>
-                                 <li class="nav-item">
+                                  <!--<li class="nav-item">
                                     <a class="nav-link" href="blog.html">Blog</a>
-                                 </li>
+                                 </li>-->
                                  <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contacto</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="#">Recibir cotizacion</a></div>
+                              <!--<div class="sign_btn"><a href="#">Recibir cotizacion</a></div>-->
                            </div>
                         </nav>
                      </div>
@@ -235,84 +232,70 @@ button {
             <span></span>
          </div>
       </div>
-      <section id="portfolio">
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1519211975560-4ca611f5a72a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ae34625b8db390fb2b784800d76d225&auto=format&fit=crop&w=700&q=80" />
-           <p>websites</p>
-           <h3 class="grid__title"> front-end</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
+      <div class="row">
+         <div class="container">
+            <div class="test_box box-01 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="test_box box-02 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="test_box box-03 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="test_box box-04 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="test_box box-05 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
+            <div class="test_box box-06 col-xs-6 col-md-4">
+               <div class="inner">
+                  <a href="#" class="test_click">
+                     <div class="flex_this">
+                        <h1 class="test_title">Title</h1>
+                        <span class="test_link">Link</span>
+                     </div>
+                  </a>
+               </div>
+            </div>
          </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1521104955835-ba91c70d6443?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=38cdeda7d073c4b6d47a5776f184cba9&auto=format&fit=crop&w=700&q=80" />
-           <p>pure css</p>
-           <h3 class="grid__title"> front-end</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e5a31d03ddee66863a599421f792e07b&auto=format&fit=crop&w=700&q=80" />
-           <p>web apps</p>
-           <h3 class="grid__title"> full-stack</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1472437774355-71ab6752b434?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd4d735954f33290fbf984e4eb7abe32&auto=format&fit=crop&w=700&q=80" />
-           <p>daily ui</p>
-           <h3 class="grid__title"> ui/ux design</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7c5008952226f48ed4bf5d3ea64ff545&auto=format&fit=crop&w=700&q=80" />
-           <p>websites</p>
-           <h3 class="grid__title"> front-end</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?ixlib=rb-0.3.5&s=a4b3dc4bee43da458f6aa5c05be6bfc4&auto=format&fit=crop&w=700&q=80" />
-           <p>pure css</p>
-           <h3 class="grid__title"> front-end</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1481762554390-ff5562748bdf?ixlib=rb-0.3.5&s=1b7f850b7f8f702e237b0f81c0ec0bf5&auto=format&fit=crop&w=700&q=80" />
-           <p>web apps</p>
-           <h3 class="grid__title"> full-stack</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         
-         <div class="project">
-           <img class="project__image" src="https://images.unsplash.com/photo-1463620695885-8a91d87c53d0?ixlib=rb-0.3.5&s=e5bf2f64858b8abe2a386b0c6df594e4&auto=format&fit=crop&w=700&q=80" />
-           <p>daily ui</p>
-           <h3 class="grid__title"> ui/ux design</h3>
-           <div class="grid__overlay">
-             <button class="viewbutton">view more</button>
-           </div>
-         </div>
-         <div class="overlay">
-           <div class="overlay__inner">
-             <button class="close">close X</button>
-             <img>
-           </div>
-         </div>
-       </section>
+      </div>
       <!-- End Services -->
      
       <!-- clients -->
@@ -321,7 +304,7 @@ button {
             <div class="row">
                <div class="col-md-6 offset-md-3">
                   <div class="titlepage">
-                     <h2>What is Say clients</h2>
+                     <h2>Qué dicen nuestros clientes</h2>
                      <span></span>
                   </div>
                </div>
@@ -329,13 +312,13 @@ button {
             <div class="row">
                <div class="col-md-12">
                   <div class="clients_box">
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                     <p>Me ofrecieron la mejor atención, tuvieron un buen trato y una rápida respuesta.</p>
                   </div>
                   <div class="jonu">
                      <img src="images/cross_img.png" alt="#"/>
-                     <h3>Jone due</h3>
-                     <strong>(sure there isn't)</strong>
-                     <a class="read_more" href="#">Get A Quote</a>
+                     <h3>Carlos Cazares</h3>
+                     <!--<strong>(sure there isn't)</strong>-->
+                     <a class="read_more" href="#">Pedir información</a>
                   </div>
                </div>
             </div>
@@ -390,27 +373,8 @@ button {
       <!-- end footer -->
       <!-- Javascript files-->
       <!-- gallery products js -->
-      <script src="js/gallery-products.js">
-         const buttons = document.querySelectorAll('.project');
-const overlay = document.querySelector('.overlay');
-const overlayImage = document.querySelector('.overlay__inner img');
-
-function open(e) {
-  overlay.classList.add('open');
-  const src= e.currentTarget.querySelector('img').src;
-  overlayImage.src = src;
-}
-
-function close() {
-  overlay.classList.remove('open');
-}
-
-buttons.forEach(button => button.addEventListener('click', open));
-overlay.addEventListener('click', close);
-
-
-
-      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
       <!-- end gallery products js-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
