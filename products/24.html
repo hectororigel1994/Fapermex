@@ -183,11 +183,10 @@
 <!-- Product -->
 
 <div class="container-fluid" style="margin-top:20px;"><!-- Container -->
-   <h2 style="text-align:center ;">Máquina formadora de rollos de paneles de pared
-    con desbobinador hidráulico.</h2>>
+   <h2 style="text-align:center ;">Maquina formadora de rollos de poste de melocotón.</h2>>
 <div class="row"><!-- Row -->
    <div class="col-sm-6"><!-- Col -->
-   <img src="../images/products/2.png" style=" width: 100%;
+   <img src="../images/products/24.png" style=" width: 100%;
    height: auto;">
 </div><!-- ./col -->   
    <div class="col-sm-6"><!-- col -->
@@ -198,12 +197,12 @@
           <div id="paypal-button-container"></div>
         </div>
       </div>
-    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=MXN" data-sdk-integration-source="button-factory"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
     <script>
       function initPayPalButton() {
         paypal.Buttons({
           style: {
-            shape: 'rect',
+            shape: 'pill',
             color: 'blue',
             layout: 'vertical',
             label: 'buynow',
@@ -212,7 +211,7 @@
   
           createOrder: function(data, actions) {
             return actions.order.create({
-              purchase_units: [{"description":"Máquina formadora de rollos de paneles de pared\ncon desbobinador hidraulico","amount":{"currency_code":"MXN","value":2.08}}]
+              purchase_units: [{"description":"Máquina formadora de rollos de poste de melocotón con desbobinador hidraulico.\n","amount":{"currency_code":"USD","value":3.37}}]
             });
           },
   
@@ -238,7 +237,7 @@
         }).render('#paypal-button-container');
       }
       initPayPalButton();
-    </script> 
+    </script>
     <!-- End paypal button -->
 
 </div><!-- ./col -->
