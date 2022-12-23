@@ -30,6 +30,19 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+   <!-- Customer Carousel -->
+   <link href="css/carousel-customer.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>  
+   <!-- End carousel -->
+   <!-- Whatsapp -->
+   
+<link rel="stylesheet" href="css/whatsapp.css">
+<link href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- End whatsapp -->
+
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -80,7 +93,7 @@
                                     <a class="nav-link" href="contact.html">Contacto</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="#">Recibir cotizacion</a></div>
+                              <div class="sign_btn"><a href="https://wa.me/527295896307">Recibir cotizacion</a></div>
                            </div>
                         </nav>
                      </div>
@@ -91,10 +104,20 @@
       </header>
       <!-- end header inner -->
       <!-- end header -->
-    
+      <video  controls  style=" width: 100%;
+      height: auto;"
+      playsinline
+      autoplay
+      muted
+      loop>
+         <source src="images/about-us.mp4" type="video/mp4">
+         <source src="images/about-us.mp4" type="video/ogg">
+       Your browser does not support the video tag.
+       </video>
       <!-- about -->
       <div id="about"  class="about">
          <div class="container">
+      
             <div class="row d_flex">
                <div class="col-md-7">
                   <div class="titlepage">
@@ -123,6 +146,56 @@
          </div>
       </div>
       <!-- end about -->
+
+      <!-- Whatsapp chat -->
+      <div id='whatsapp-chat' class='hide'>
+         <div class='whatsapp-chat-header'>
+             <div class='whatsapp-chat-avatar'>
+               <img src='images/logo.png' alt="Tedbree Logo" />
+             </div>
+             <p><span class="whatsapp-chat-name">Fapermex</span><br><small>La mejor calidad y servicio</small></p>
+         </div>
+         
+         <div class='start-chat'>
+           <div pattern="https://elfsight.com/assets/chats/patterns/whatsapp.png" class="WhatsappChat__Component-sc-1wqac52-0 whatsapp-chat-body">
+             <div class="WhatsappChat__MessageContainer-sc-1wqac52-1 dAbFpq">
+               <div style="opacity: 0;" class="WhatsappDots__Component-pks5bf-0 eJJEeC">
+                 <div class="WhatsappDots__ComponentInner-pks5bf-1 hFENyl">
+                   <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotOne-pks5bf-3 ixsrax"></div>
+                   <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotTwo-pks5bf-4 dRvxoz"></div>
+                   <div class="WhatsappDots__Dot-pks5bf-2 WhatsappDots__DotThree-pks5bf-5 kXBtNt"></div>
+                 </div>
+               </div>
+               <div style="opacity: 1;" class="WhatsappChat__Message-sc-1wqac52-4 kAZgZq">
+                 <div class="WhatsappChat__Author-sc-1wqac52-3 bMIBDo">Fapermex</div>
+                 <div class="WhatsappChat__Text-sc-1wqac52-2 iSpIQi">Hola 👋<br><br>Como podemos ayudarte?</div>
+                 <div class="WhatsappChat__Time-sc-1wqac52-5 cqCDVm">1:40</div>
+               </div>
+             </div>
+           </div>
+       
+           <div class='blanter-msg'>
+             <textarea id='chat-input' placeholder='Write a response' maxlength='120' row='1'></textarea>
+             <a href='javascript:void;' id='send-it'><svg viewBox="0 0 448 448"><path d="M.213 32L0 181.333 320 224 0 266.667.213 416 448 224z"/></svg></a>
+       
+           </div>
+         </div>
+         <div id='get-number'></div>
+         <a class='close-chat' href='javascript:void'>×</a>
+       </div>
+       <a class='blantershow-chat' href='javascript:void' title='Show Chat'><svg width="20" viewBox="0 0 24 24"><defs/><path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"/><path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"/><path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg> Platica con nosotros</a>
+      <!-- end whatsapp chat -->
+
+
+
+<!-- Map -->
+<div class="wow slideInLeft map-me" style="visibility: visible; animation-name: slideInLeft;">
+   <div id="map">
+   <iframe allowfullscreen="" height="450" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.2740857848653!2d-99.74362534909108!3d19.270443450774447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd876cabfe6993%3A0xede70b3f5af5796a!2sF%C3%A1brica%20de%20perfiles%20de%20Tablaroca!5e0!3m2!1ses-419!2smx!4v1671778725303!5m2!1ses-419!2smx" style="border:0;" width="600"></iframe>
+   </div>
+   </div>
+   
+<!-- End map -->
      
       <!--  footer -->
       <footer>
@@ -170,6 +243,7 @@
       </footer>
       <!-- end footer -->
       <!-- Javascript files-->
+      <script src="js/whatsapp.js"></script><!-- Whatsapp-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
